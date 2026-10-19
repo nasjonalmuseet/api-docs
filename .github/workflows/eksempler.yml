@@ -1,0 +1,27 @@
+name: Test eksempler
+on:
+  pull_request:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r requirements.txt
+      - name: Kjør eksemplene mot api.nasjonalmuseet.no
+        env:
+          NM_API_KEY: ${{ secrets.NM_API_KEY }}
+          NM_API_KEY_EXT: ${{ secrets.NM_API_KEY_EXT }}
+        run: |
+          if [ -z "$NM_API_KEY" ]; then echo "NM_API_KEY er ikke satt; hopper over."; exit 0; fi
+          python scripts/kjor_eksempler.py

@@ -1,0 +1,60 @@
+site_name: Nasjonalmuseets samlings-API
+site_url: https://nasjonalmuseet.github.io/api-docs/no/
+docs_dir: docs/no
+site_dir: site/no
+repo_url: https://github.com/nasjonalmuseet/api-docs
+edit_uri: edit/main/docs/no/
+theme:
+  name: material
+  language: nb
+  font: false
+  palette:
+    - scheme: default
+      primary: black
+      accent: black
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+extra_css:
+  - assets/nm.css
+extra:
+  alternate:
+    - name: Norsk
+      link: /api-docs/no/
+      lang: "no"
+    - name: English
+      link: /api-docs/en/
+      lang: en
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path: [eksempler, assets]
+      check_paths: true
+nav:
+  - Forside: index.md
+  - Veiledninger:
+      - veiledninger/index.md
+      - Kom i gang: veiledninger/kom-i-gang.md
+      - Finn verk: veiledninger/finn-verk.md
+      - Bilder og IIIF: veiledninger/bilder.md
+      - Semantisk søk: veiledninger/semantisk-sok.md
+      - Linked Art: veiledninger/linked-art.md
+  - Dokumentasjon:
+      - dokumentasjon/index.md
+      - Tilgangsnivåer: dokumentasjon/tilgangsnivaer.md
+      - Felt på verket: dokumentasjon/felt.md
+      - Feilsvar og grenser: dokumentasjon/feil-og-grenser.md
+      - Stabilitet og versjoner: dokumentasjon/stabilitet.md
+  - Vilkår og bruk: vilkar.md
+  - Om: om.md
