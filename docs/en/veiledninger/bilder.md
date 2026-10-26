@@ -44,6 +44,9 @@ A IIIF Image address has five parts after `iiifService`:
 
 ## Step 3: Open the manifest in a viewer
 
+!!! note "Preliminary"
+    The manifest is not final and may change.
+
 The manifest is open, without a key, because image viewers cannot send their own headers:
 
 --8<-- "iiif-manifest.en.sh"

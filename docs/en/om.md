@@ -55,7 +55,7 @@ In the documentation, open [**Objects → GET /api/v1/objects/text-search**](htt
 curl -H "X-API-Key: $KEY" "https://api.nasjonalmuseet.no/api/v1/objects/text-search?q=Munch&lang=en"
 ```
 
-**4. The images as IIIF (open, no key)**
+**4. The images as IIIF (open, no key; preliminary, may change)**
 
 <https://api.nasjonalmuseet.no/api/v1/iiif/manifest/NG.M.00939.json>
 
