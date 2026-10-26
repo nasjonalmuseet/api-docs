@@ -23,8 +23,8 @@ Every request can be tried in [Swagger](https://api.nasjonalmuseet.no/api/docs).
 | [`GET /api/v1/objects/{nmId}`](https://api.nasjonalmuseet.no/api/docs#/Objects/get_object_api_v1_objects__nmId__get) | pub | One work |
 | [`GET /api/v1/objects`](https://api.nasjonalmuseet.no/api/docs#/Objects/browse_objects_api_v1_objects_get) | pub | Browse the collection |
 | [`GET /api/v1/objects/text-search`](https://api.nasjonalmuseet.no/api/docs#/Objects/text_search_objects_api_v1_objects_text_search_get) | pub | Search for words in the catalogue |
-| [`GET /api/v1/objects/{nmId}/multimedia`](https://api.nasjonalmuseet.no/api/docs#/Multimedia/list_object_multimedia_api_v1_objects__nmId__multimedia_get) | pub | The work's images |
-| [`GET /api/v1/iiif/manifest/{nmId}.json`](https://api.nasjonalmuseet.no/api/docs#/IIIF/get_manifest_api_v1_iiif_manifest__nmId__json_get) | open | IIIF manifest |
+| [`GET /api/v1/objects/{nmId}/multimedia`](https://api.nasjonalmuseet.no/api/docs#/Multimedia/list_object_multimedia_api_v1_objects__nmId__multimedia_get) | pub | The work's images (preliminary: the structure may change) |
+| [`GET /api/v1/iiif/manifest/{nmId}.json`](https://api.nasjonalmuseet.no/api/docs#/IIIF/get_manifest_api_v1_iiif_manifest__nmId__json_get) | open | IIIF manifest (preliminary: may change) |
 | [`GET /api/linkedart/object/{id}`](https://api.nasjonalmuseet.no/api/docs#/LinkedArt/get_linkedart_object_api_linkedart_object___id__get) | open | Linked Art: work |
 | [`GET /api/linkedart/object/text-search`](https://api.nasjonalmuseet.no/api/docs#/LinkedArt/text_search_linkedart_objects_api_linkedart_object_text_search_get) | open | Linked Art: search |
 | [`GET /api/v1/objects/linkedart/{nmId}`](https://api.nasjonalmuseet.no/api/docs#/LinkedArt/get_object_linkedart_api_v1_objects_linkedart__nmId__get) | pub | Linked Art by inventory number |

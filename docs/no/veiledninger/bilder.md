@@ -44,6 +44,9 @@ En IIIF Image-adresse har fem deler etter `iiifService`:
 
 ## Steg 3: Åpne manifestet i en viser
 
+!!! note "Foreløpig"
+    Manifestet er ikke ferdig og kan endres.
+
 Manifestet er åpent, uten nøkkel, fordi bildevisere ikke kan sende egne headere:
 
 --8<-- "iiif-manifest.sh"

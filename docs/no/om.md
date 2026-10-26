@@ -48,7 +48,7 @@ I dokumentasjonen: [**Objects → GET /api/v1/objects/text-search**](https://api
 curl -H "X-API-Key: $NOKKEL" "https://api.nasjonalmuseet.no/api/v1/objects/text-search?q=Munch"
 ```
 
-**4. Bildene som IIIF (åpent, ingen nøkkel)**
+**4. Bildene som IIIF (åpent, ingen nøkkel; foreløpig, kan endres)**
 <https://api.nasjonalmuseet.no/api/v1/iiif/manifest/NG.M.00939.json>
 
 Lim adressen inn i en IIIF-viser (for eksempel Mirador eller Universal Viewer), så kan du zoome i bildene.
