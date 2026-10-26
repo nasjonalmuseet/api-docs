@@ -4,7 +4,7 @@
 
 Nasjonalmuseets samlings-API gir deg samlingen som data: de samme verkene du finner på [Samlingen på nett](https://www.nasjonalmuseet.no/samlingen/), i et format som programmer, regneark og forskningsverktøy kan lese.
 
-API-et dekker publiserte verk innen billedkunst, design, kunsthåndverk og arkitektur: titler, kunstnere, dateringer, teknikk og materiale, mål, emneord og bilder. Det er gratis å bruke. Du trenger bare en API-nøkkel, og den lager du selv på et par minutter.
+API-et dekker publiserte verk innen billedkunst, design, kunsthåndverk og arkitektur: titler, kunstnere, dateringer, teknikk og materiale, mål, emneord, påskrifter, proveniens, opphavsrett og bilder. Det er gratis å bruke. Du trenger bare en API-nøkkel, og den lager du selv på et par minutter.
 
 ## Hva kan jeg gjøre med det?
 
@@ -32,7 +32,7 @@ I dokumentasjonen: [**Objects → GET /api/v1/objects/{nmId}**](https://api.nasj
 curl -H "X-API-Key: $NOKKEL" https://api.nasjonalmuseet.no/api/v1/objects/NG.M.00939
 ```
 
-Du får tittel, kunstner, datering, teknikk og materiale, mål, emneord og bilder.
+Du får tittel, kunstner, datering, teknikk og materiale, mål, emneord, påskrifter, proveniens, opphavsrett og bilder.
 
 **2. Bla i samlingen**
 I dokumentasjonen: [**Objects → GET /api/v1/objects**](https://api.nasjonalmuseet.no/api/docs#/Objects/browse_objects_api_v1_objects_get).

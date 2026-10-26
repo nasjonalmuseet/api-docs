@@ -4,7 +4,7 @@
 
 The Nasjonalmuseet collection API gives you the collection as data. It holds the same works you find in the [online collection](https://www.nasjonalmuseet.no/en/collection/), in a format that programs, spreadsheets and research tools can read.
 
-The API covers published works of fine art, design, crafts and architecture, with titles, artists, dates, technique and materials, dimensions, keywords and images. It is free to use. You only need an API key, which you create yourself in a couple of minutes.
+The API covers published works of fine art, design, crafts and architecture, with titles, artists, dates, technique and materials, dimensions, keywords, inscriptions, provenance, copyright and images. It is free to use. You only need an API key, which you create yourself in a couple of minutes.
 
 ## What can I do with it?
 
@@ -37,7 +37,7 @@ In the documentation, open [**Objects → GET /api/v1/objects/{nmId}**](https://
 curl -H "X-API-Key: $KEY" "https://api.nasjonalmuseet.no/api/v1/objects/NG.M.00939?lang=en"
 ```
 
-You get the title, artist, date, technique and materials, dimensions, keywords and images.
+You get the title, artist, date, technique and materials, dimensions, keywords, inscriptions, provenance, copyright and images.
 
 **2. Browse the collection**
 

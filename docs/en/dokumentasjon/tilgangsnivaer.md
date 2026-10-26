@@ -15,8 +15,8 @@ Each level has all the fields from the level above, plus:
 
 | Level | Fields |
 |---|---|
-| pub | Catalogue data: id and inventory number, titles, object name, date and production year, producers, materials and techniques, dimensions, collection, credit line, keywords and published images. **No AI-generated data.** |
-| ext | Object type, classification, style period, exhibitions, **on display now** (room and exhibition), and AI keywords on the images |
+| pub | Catalogue data: id and inventory number, titles, object name, date and production year, producers and place of production, materials and techniques, dimensions, collection, credit line, keywords, motif type, classification, owner, inscriptions, provenance, copyright and published images. **No AI-generated data.** |
+| ext | Object type, style period, exhibitions, **on display now** (room and exhibition), and AI keywords on the images |
 | full | Not available to external users |
 
 The complete field list per level is in [Fields](felt.md).

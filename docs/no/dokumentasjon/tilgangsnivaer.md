@@ -15,8 +15,8 @@ Hvert nivå har alle feltene fra nivået over, pluss:
 
 | Nivå | Felt |
 |---|---|
-| pub | Katalogdata: id og inventarnummer, titler, betegnelse, datering og produksjonsår, produsenter, materialer og teknikker, mål, samling, kreditering, emneord og publiserte bilder. **Ingen KI-genererte data.** |
-| ext | Objekttype, klassifikasjon, stilperiode, utstillinger, **utstilt nå** (rom og utstilling), og på bildene KI-nøkkelord |
+| pub | Katalogdata: id og inventarnummer, titler, betegnelse, datering og produksjonsår, produsenter og produksjonssted, materialer og teknikker, mål, samling, kreditering, emneord, motivtype, klassifikasjon, eier, påskrifter, proveniens, opphavsrett og publiserte bilder. **Ingen KI-genererte data.** |
+| ext | Objekttype, stilperiode, utstillinger, **utstilt nå** (rom og utstilling), og på bildene KI-nøkkelord |
 | full | Ikke tilgjengelig for eksterne |
 
 Den fullstendige feltlista per nivå står i [Felt på verket](felt.md).
