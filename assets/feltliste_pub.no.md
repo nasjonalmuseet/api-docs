@@ -32,6 +32,10 @@
 | `production[].person.gender` | Kjønn (fra personregisteret) | tekst | nei |
 | `production[].person.nationality` | Nasjonalitet | liste | nei |
 | `production[].person.certainty` | Sikkerhet for tilskrivningen | tekst | nei |
+| `production[].place` | Produksjonssted (navn, type, sikkerhet) |  | ja |
+| `production[].place.name` | Stedsnavn fra stedsregisteret |  |  |
+| `production[].place.type` | Stedstype, for eksempel Produksjonssted |  |  |
+| `production[].place.certainty` | Sikkerhet, for eksempel antatt |  |  |
 | `materials` | Materialer | liste | ja |
 | `techniques` | Teknikker | liste | ja |
 | `materialTechniqueDescription` | Materiale og teknikk som fritekst | tekst | ja |
@@ -44,6 +48,33 @@
 | `collection` | Samling | tekst | delvis (nettsiden viser også institusjon) |
 | `creditLine` | Kreditering | tekst | ja |
 | `keywords` | Emneord fra katalogen | liste | ja |
+| `motifType` | Motivtype | liste | ja |
+| `classification` | Klassifikasjon | liste | ja |
+| `owner` | Eier | tekst | ja |
+| `inscriptions` | Påskrifter, signaturer og stempler | liste | ja |
+| `inscriptions[].type` | Type: Påskrift, Signatur, Stempel … | tekst |  |
+| `inscriptions[].transcription` | Teksten slik den står på verket | tekst |  |
+| `inscriptions[].position` | Plassering på verket | tekst |  |
+| `inscriptions[].method` | Teknikk for påskriften | tekst |  |
+| `inscriptions[].language` | Språk | tekst |  |
+| `inscriptions[].inscriber` | Hvem som skrev | tekst |  |
+| `inscriptions[].date` | Datering av påskriften | tekst |  |
+| `provenance` | Proveniens | liste | ja |
+| `provenance[].type` | Type: Eierskap, Aksesjon, Ervervelse … | tekst |  |
+| `provenance[].owner` | Eierens navn fra personregisteret | tekst |  |
+| `provenance[].role` | Rolle, for eksempel [40] Tidligere eier | tekst |  |
+| `provenance[].certainty` | Sikkerhet | tekst |  |
+| `provenance[].place` | Sted fra stedsregisteret |  |  |
+| `provenance[].dateFrom` | Fra (datotekst) | tekst |  |
+| `provenance[].dateTo` | Til (datotekst) | tekst |  |
+| `provenance[].dateFromYear` | Fra år | heltall |  |
+| `provenance[].dateToYear` | Til år | heltall |  |
+| `copyright` | Opphavsrett: rettighetshaver, forvalter, status og utløp | liste | ja |
+| `copyright[].holder` | Rettighetshaver | tekst |  |
+| `copyright[].manager` | Forvalter, for eksempel BONO |  |  |
+| `copyright[].status` | Status | tekst |  |
+| `copyright[].dateTo` | Når vernet går ut | tekst |  |
+| `publicDomain` | Fri bruk | boolsk | nei |
 | `multimedia` | Publiserte bilder | liste | ja (som bildevisning) |
 | `multimedia[].imageId` | Bildets id (multimediaRef) | heltall | nei |
 | `multimedia[].uuid` | Bildets UUID | tekst | nei |
@@ -54,5 +85,4 @@
 | `multimedia[].creditLine` | Kreditering for bildet |  |  |
 | `multimedia[].iiifService` | IIIF Image API-adresse | tekst |  |
 | `multimedia[].imageUrl` | Bilde-URL (1200 px bredde) | tekst |  |
-| `multimedia[].catalogueTerms` | Katalogtermer per bilde (skrevet av berikelsen) |  | nei (skrevet av berikelsen) |
 | `primaryImage` | Hovedbildet (samme form som multimedia[]) | objekt | ja (som bildevisning) |

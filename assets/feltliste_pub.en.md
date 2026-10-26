@@ -32,6 +32,10 @@
 | `production[].person.gender` | Gender (from the person register) | text |
 | `production[].person.nationality` | Nationality | list |
 | `production[].person.certainty` | Certainty of attribution | text |
+| `production[].place` | Place of production (name, type, certainty) |  |
+| `production[].place.name` | Place name from the place register |  |
+| `production[].place.type` | Place type, e.g. Place of production |  |
+| `production[].place.certainty` | Certainty, e.g. assumed |  |
 | `materials` | Materials | list |
 | `techniques` | Techniques | list |
 | `materialTechniqueDescription` | Material and technique as free text | text |
@@ -44,6 +48,33 @@
 | `collection` | Collection | text |
 | `creditLine` | Credit line | text |
 | `keywords` | Subject terms from the catalogue | list |
+| `motifType` | Motif type | list |
+| `classification` | Classification | list |
+| `owner` | Owner | text |
+| `inscriptions` | Inscriptions, signatures and stamps | list |
+| `inscriptions[].type` | Type: Inscription, Signature, Stamp … | text |
+| `inscriptions[].transcription` | The text as written on the work | text |
+| `inscriptions[].position` | Position on the work | text |
+| `inscriptions[].method` | Method of the inscription | text |
+| `inscriptions[].language` | Language | text |
+| `inscriptions[].inscriber` | Inscriber | text |
+| `inscriptions[].date` | Date of the inscription | text |
+| `provenance` | Provenance | list |
+| `provenance[].type` | Type: Ownership, Accession, Acquisition … | text |
+| `provenance[].owner` | Owner's name from the person register | text |
+| `provenance[].role` | Role, e.g. [40] Previous owner | text |
+| `provenance[].certainty` | Certainty | text |
+| `provenance[].place` | Place from the place register |  |
+| `provenance[].dateFrom` | From (date text) | text |
+| `provenance[].dateTo` | To (date text) | text |
+| `provenance[].dateFromYear` | From year | integer |
+| `provenance[].dateToYear` | To year | integer |
+| `copyright` | Copyright: holder, manager, status and expiry | list |
+| `copyright[].holder` | Rights holder | text |
+| `copyright[].manager` | Rights manager, e.g. BONO |  |
+| `copyright[].status` | Status | text |
+| `copyright[].dateTo` | When protection expires | text |
+| `publicDomain` | Public domain | boolean |
 | `multimedia` | Published images | list |
 | `multimedia[].imageId` | Image id (multimediaRef) | integer |
 | `multimedia[].uuid` | Image UUID | text |
@@ -54,5 +85,4 @@
 | `multimedia[].creditLine` | Credit line for the image |  |
 | `multimedia[].iiifService` | IIIF Image API address | text |
 | `multimedia[].imageUrl` | Image URL (1200 px wide) | text |
-| `multimedia[].catalogueTerms` | Catalogue terms per image (written by enrichment) |  |
 | `primaryImage` | Main image (same shape as multimedia[]) | object |
