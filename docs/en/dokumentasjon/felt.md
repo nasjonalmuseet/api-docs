@@ -24,6 +24,13 @@ and date. The API does not choose one main producer.
 **Production year (`productionYear`, `productionYearTo`).** Derived from the production date,
 otherwise from years in `labelDate`. Used for sorting and filtering. Show `labelDate`.
 
+**Names of owners, places and rights holders.** `owner`, `production[].place`, `provenance[]` and
+`copyright[]` carry names from the museum's person and place registers. Previous owners in the
+provenance may be private individuals.
+
+**Copyright (`copyright[]`, `publicDomain`).** Shows the rights holder, the manager and when
+protection expires. Check these fields before reusing an image, see [Terms](../vilkar.md).
+
 **Images.** Only published images are included. `primaryImage` is the main image.
 
 **No AI data at pub.** The open level contains only catalogue data from the museum's

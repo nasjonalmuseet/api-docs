@@ -24,6 +24,13 @@ og datering. API-et velger ikke én hovedprodusent.
 **Produksjonsår (`productionYear`, `productionYearTo`).** Avledet fra produksjonsdateringen,
 ellers fra årstall i `labelDate`. Brukes til sortering og filtrering. Vis `labelDate`.
 
+**Navn på eier, steder og rettighetshavere.** `owner`, `production[].place`, `provenance[]` og
+`copyright[]` har navn fra museets person- og stedsregister. Tidligere eiere i proveniensen kan
+være privatpersoner.
+
+**Opphavsrett (`copyright[]`, `publicDomain`).** Viser rettighetshaver, forvalter og når vernet går
+ut. Sjekk feltene før du gjenbruker et bilde, se [Vilkår](../vilkar.md).
+
 **Bilder.** Bare publiserte bilder er med. `primaryImage` er hovedbildet.
 
 **Ingen KI-data på pub.** Det åpne nivået inneholder bare katalogdata fra museets

@@ -9,7 +9,7 @@ API key, which you create yourself in a couple of minutes.
 ## What you find here
 
 - **Over 60,000 published works** of fine art, design, crafts and architecture
-- **Titles, artists, dates, technique, materials, dimensions and keywords** from the museum's catalogue
+- **Titles, artists, dates, technique, materials, dimensions, keywords, inscriptions, provenance and copyright** from the museum's catalogue
 - **High-resolution images** through IIIF, with zoom and cropping
 - **Linked Art** (JSON-LD) for linked data and research
 - **Semantic search** in AI-generated image descriptions, for partners and research

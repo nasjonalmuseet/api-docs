@@ -8,7 +8,7 @@ og den lager du selv på et par minutter.
 ## Hva du finner her
 
 - **Over 60 000 publiserte verk** innen billedkunst, design, kunsthåndverk og arkitektur
-- **Titler, kunstnere, datering, teknikk, materiale, mål og emneord** fra museets katalog
+- **Titler, kunstnere, datering, teknikk, materiale, mål, emneord, påskrifter, proveniens og opphavsrett** fra museets katalog
 - **Bilder i høy oppløsning** gjennom IIIF, med zoom og utsnitt
 - **Linked Art** (JSON-LD) for koblet data og forskning
 - **Semantisk søk** i KI-genererte bildebeskrivelser, for partnere og forskning
