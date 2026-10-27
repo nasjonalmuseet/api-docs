@@ -29,8 +29,6 @@
 | `production[].person.name` | Navn | tekst | ja |
 | `production[].person.birthYear` | Fødselsår | tekst | nei |
 | `production[].person.deathYear` | Dødsår | tekst | nei |
-| `production[].person.gender` | Kjønn (fra personregisteret) | tekst | nei |
-| `production[].person.nationality` | Nasjonalitet | liste | nei |
 | `production[].person.certainty` | Sikkerhet for tilskrivningen | tekst | nei |
 | `production[].place` | Produksjonssted (navn, type, sikkerhet) |  | ja |
 | `production[].place.name` | Stedsnavn fra stedsregisteret |  |  |

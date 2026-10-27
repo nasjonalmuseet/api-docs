@@ -29,8 +29,6 @@
 | `production[].person.name` | Name | text |
 | `production[].person.birthYear` | Year of birth | text |
 | `production[].person.deathYear` | Year of death | text |
-| `production[].person.gender` | Gender (from the person register) | text |
-| `production[].person.nationality` | Nationality | list |
 | `production[].person.certainty` | Certainty of attribution | text |
 | `production[].place` | Place of production (name, type, certainty) |  |
 | `production[].place.name` | Place name from the place register |  |
