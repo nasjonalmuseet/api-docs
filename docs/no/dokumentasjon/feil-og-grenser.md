@@ -42,6 +42,27 @@ og `X-RateLimit-Reset`. Vent og prøv igjen:
 
 Trenger en offentlig tjeneste mer, kan nøkkelen få egen grense. Kontakt oss.
 
+## Sidestørrelser
+
+| Kall | Standard | Høyst per side |
+|---|---|---|
+| `GET /objects` (bla) | 50 | 200 |
+| `GET /objects/text-search` | 20 | 100 |
+| `POST /objects/find` | 50 | 100, og `(page − 1) × resultsPerPage` høyst 20 000 |
+| `POST /search/*` | 20 | 100 |
+
+## Mellomlagring
+
+Svarene mellomlagres en tid. En endring i katalogen kan derfor bruke opptil seks timer på å vises.
+
+| Kall | Lagres i |
+|---|---|
+| Verk, tekstsøk, bilder og Linked Art | 6 timer |
+| `POST /objects/find` | 5 minutter, eller 1 time når filteret må lese alle verkene |
+| `POST /search/semantic` | 10 minutter |
+| `POST /search/filter` | 1 time |
+| `GET /objects` (bla) | Lagres ikke |
+
 ## Nøkkelen
 
 - Varer i 180 dager. Forny den på registreringssiden før den går ut.

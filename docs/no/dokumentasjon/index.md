@@ -23,6 +23,7 @@ Hvert kall kan prøves i [Swagger](https://api.nasjonalmuseet.no/api/docs).
 | [`GET /api/v1/objects/{nmId}`](https://api.nasjonalmuseet.no/api/docs#/Objects/get_object_api_v1_objects__nmId__get) | pub | Ett verk |
 | [`GET /api/v1/objects`](https://api.nasjonalmuseet.no/api/docs#/Objects/browse_objects_api_v1_objects_get) | pub | Bla i samlingen |
 | [`GET /api/v1/objects/text-search`](https://api.nasjonalmuseet.no/api/docs#/Objects/text_search_objects_api_v1_objects_text_search_get) | pub | Søk på ord i katalogen |
+| [`POST /api/v1/objects/find`](https://api.nasjonalmuseet.no/api/docs#/Objects/find_objects_api_v1_objects_find_post) | pub | Oppslag med filter på feltene |
 | [`GET /api/v1/objects/{nmId}/multimedia`](https://api.nasjonalmuseet.no/api/docs#/Multimedia/list_object_multimedia_api_v1_objects__nmId__multimedia_get) | pub | Verkets bilder (foreløpig: strukturen kan endres) |
 | [`GET /api/v1/iiif/manifest/{nmId}.json`](https://api.nasjonalmuseet.no/api/docs#/IIIF/get_manifest_api_v1_iiif_manifest__nmId__json_get) | åpent | IIIF-manifest (foreløpig: kan endres) |
 | [`GET /api/linkedart/object/{id}`](https://api.nasjonalmuseet.no/api/docs#/LinkedArt/get_linkedart_object_api_linkedart_object___id__get) | åpent | Linked Art: verk |
@@ -32,6 +33,7 @@ Hvert kall kan prøves i [Swagger](https://api.nasjonalmuseet.no/api/docs).
 | [`POST /api/v1/search/semantic`](https://api.nasjonalmuseet.no/api/docs#/Search/semantic_search_api_v1_search_semantic_post) | ext | Semantisk søk |
 | [`POST /api/v1/search/filter`](https://api.nasjonalmuseet.no/api/docs#/Search/filter_search_api_v1_search_filter_post) | ext | Filtrering |
 | [`POST /api/v1/search/similar/{imageId}`](https://api.nasjonalmuseet.no/api/docs#/Search/similar_search_api_v1_search_similar__imageId__post) | ext | Lignende bilder |
+| [`POST /api/v1/search/similar`](https://api.nasjonalmuseet.no/api/docs#/Search/similar_search_by_work_api_v1_search_similar_post) | ext | Lignende verk, fra verkets hovedbilde |
 | [`POST /api/v1/search/explain`](https://api.nasjonalmuseet.no/api/docs#/Search/explain_search_api_v1_search_explain_post) | ext | Hvorfor et bilde traff |
 | [`GET /api/health`](https://api.nasjonalmuseet.no/api/docs#/System/health_check_api_health_get) | åpent | Status og versjon |
 

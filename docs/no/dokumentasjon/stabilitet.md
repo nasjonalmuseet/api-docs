@@ -8,7 +8,8 @@ API-et er bygget for å kunne brukes i tjenester som skal leve lenge.
 - **Unntak:** hvilket tilgangsnivå et endepunkt krever, og om et verk eller bilde er publisert. Et verk som avpubliseres i museets samlingssystem, forsvinner fra API-et.
 - **Linked Art-adressene er varige** og kan brukes som lenker. Et verk som avpubliseres, gir `404` på sin adresse, men adressen gjenbrukes aldri.
 
-Kjørende versjon står på <https://api.nasjonalmuseet.no/api/health>.
+Kjørende versjon står på <https://api.nasjonalmuseet.no/api/health>. Hva som er endret, står i
+[Endringsloggen](endringslogg.md), og hva som skal fjernes, under [Avviklede endepunkter](avviklet.md).
 
 ## Dataene endres
 

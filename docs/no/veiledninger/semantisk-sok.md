@@ -41,6 +41,12 @@ derfor ikke på det åpne nivået.
 
     --8<-- "semantisk-sok_ext.js"
 
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-semantisk.json"
+```
+
 `lang` velger språket i søket og svaret. Uten `lang` søkes begge språk. Hvert treff har
 `score` og `bestMatchImage` (bildet som traff best).
 
@@ -52,9 +58,21 @@ verdier på norsk eller engelsk), `productionDateFrom`/`To` (årstall) og `creat
 
 --8<-- "filter_ext.py"
 
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-filter.json"
+```
+
 ## Steg 3: Finn lignende bilder
 
 --8<-- "likhet_ext.py"
+
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-likhet.json"
+```
 
 ## Steg 4: Få forslag til søketekst
 
@@ -62,6 +80,12 @@ verdier på norsk eller engelsk), `productionDateFrom`/`To` (årstall) og `creat
 ikke, og forslaget brukes bare hvis du velger det. Dette kallet virker også med pub.
 
 --8<-- "tolk.sh"
+
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-tolk.json"
+```
 
 ## Gode råd
 

@@ -1,0 +1,7 @@
+{
+  "query": "painting of a beautiful sunrise",
+  "searchText": "sunrise",
+  "fillers": ["of", "a", "beautiful"],
+  "suggestedFilters": {"objectName": ["Painting"]},
+  "terms": [{"word": "painting", "field": "objectName", "value": "Painting", "works": 5230}, {"word": "painting", "field": "techniques", "value": "Painting", "works": 221}]
+}

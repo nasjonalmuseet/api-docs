@@ -56,5 +56,7 @@ nav:
       - Fields: dokumentasjon/felt.md
       - Errors and limits: dokumentasjon/feil-og-grenser.md
       - Stability and versions: dokumentasjon/stabilitet.md
+      - Changelog: dokumentasjon/endringslogg.md
+      - Deprecated endpoints: dokumentasjon/avviklet.md
   - Terms of use: vilkar.md
   - About: om.md

@@ -33,6 +33,12 @@ Nøkkelen sendes **alltid** i headeren `X-API-Key`.
 
     --8<-- "forste-kall.js"
 
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-verk.json"
+```
+
 Svaret er verket *Skrik* (NG.M.00939) som JSON. De viktigste feltene:
 
 | Felt | Innhold |
