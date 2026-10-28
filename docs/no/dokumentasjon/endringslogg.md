@@ -4,6 +4,11 @@ Endringene som angår brukere av API-et, nyeste først. Kjørende versjon står 
 <https://api.nasjonalmuseet.no/api/health>. Reglene for endringer står under
 [Stabilitet og versjoner](stabilitet.md).
 
+## 3.14.0 — 28. oktober 2026
+- `POST /objects/find` er raskere med filter på `owner`, `motifType`, `classification`, `copyright.holder`, `copyright.manager`, `provenance.owner` og `production.place.name`.
+- Semantisk søk svarer med ordsøk alene når søkemodellen ikke svarer. Da er `channelsUsed` `["lexical"]`, og svaret har `meta` med årsaken (`degradedReason`).
+- `POST /search/explain` har `cos` og `searchScore` per kanal: likheten som cosinus og på søkets skala, (1+cos)/2.
+
 ## 3.13.0 — 27. oktober 2026
 - Produsentens kjønn og nasjonalitet (`production[].person.gender` og `.nationality`) er bare på ext, ikke på pub. `POST /objects/find` på pub avviser filter på dem.
 

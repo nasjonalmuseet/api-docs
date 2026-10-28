@@ -4,6 +4,11 @@ Changes that affect users of the API, newest first. The running version is shown
 <https://api.nasjonalmuseet.no/api/health>. The rules for changes are under
 [Stability and versions](stabilitet.md).
 
+## 3.14.0 — 28 October 2026
+- `POST /objects/find` is faster with filters on `owner`, `motifType`, `classification`, `copyright.holder`, `copyright.manager`, `provenance.owner` and `production.place.name`.
+- Semantic search answers with word search alone when the search model does not respond. `channelsUsed` is then `["lexical"]`, and the response has `meta` with the reason (`degradedReason`).
+- `POST /search/explain` has `cos` and `searchScore` per channel: the similarity as cosine and on the search scale, (1+cos)/2.
+
 ## 3.13.0 — 27 October 2026
 - The producer's gender and nationality (`production[].person.gender` and `.nationality`) are at ext only, not pub. `POST /objects/find` at pub rejects filters on them.
 
