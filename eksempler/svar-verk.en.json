@@ -1,0 +1,30 @@
+{
+  "nmId": "NG.M.00939",
+  "mainTitle": "The Scream",
+  "objectName": "Painting",
+  "labelDate": "1893",
+  "productionYear": 1893,
+  "production": [
+    {
+      "type": "Produced",
+      "role": "Artist",
+      "person": {
+        "name": "Edvard Munch",
+        "birthYear": "1863",
+        "deathYear": "1944",
+        …
+      },
+      …
+    }
+  ],
+  "materials": ["Papplate"],
+  "techniques": ["Tempera", "Oil stick"],
+  "collection": "The Fine Art Collections",
+  "primaryImage": {
+    "imageId": 474178,
+    "imageUrl": "https://ms01.nasjonalmuseet.no/iiif/tif/NG.M.00939%20GP.tif/full/1200,/0/default.jpg",
+    "iiifService": "https://ms01.nasjonalmuseet.no/iiif/tif/NG.M.00939%20GP.tif",
+    …
+  },
+  …
+}

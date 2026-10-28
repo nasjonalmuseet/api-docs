@@ -1,0 +1,31 @@
+{
+  "query": "to hester bak et gjerde",
+  "channelsUsed": ["no"],
+  "totalResults": 5,
+  "hasMore": true,
+  "data": [
+    {
+      "nmId": "NG.K&H.B.02001",
+      "mainTitle": "To sadlede hester",
+      "score": 0.03252,
+      "channel": "no",
+      "channelScores": [
+        {
+          "channel": "no",
+          "rank": 1,
+          "score": 0.01639,
+          "rawScore": 0.7784
+        },
+        …
+      ],
+      "bestMatchImage": {
+        "imageId": 36652,
+        "imageUrl": "https://ms01.nasjonalmuseet.no/iiif/tif/51439.tif/full/1200,/0/default.jpg",
+        …
+      },
+      …
+    },
+    …
+  ],
+  …
+}

@@ -8,7 +8,8 @@ The API is built to be used in services that are meant to last.
 - **Exceptions:** which access level an endpoint requires, and whether a work or image is published. A work that is unpublished in the museum's collection system disappears from the API.
 - **The Linked Art addresses are persistent** and can be used as links. A work that is unpublished gives `404` at its address, but the address is never reused.
 
-The running version is shown at <https://api.nasjonalmuseet.no/api/health>.
+The running version is shown at <https://api.nasjonalmuseet.no/api/health>. What has changed is in the
+[Changelog](endringslogg.md), and what will be removed under [Deprecated endpoints](avviklet.md).
 
 ## The data changes
 

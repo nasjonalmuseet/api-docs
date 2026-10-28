@@ -21,6 +21,12 @@ søket finner bilder som ligner beskrivelsen, også når ordene ikke står i kat
 GET https://api.nasjonalmuseet.no/api/v1/objects/NG.M.00939
 ```
 
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-verk.json"
+```
+
 `nmId` er ikke følsom for store og små bokstaver: `ng.m.00939` gir samme verk. Bruk
 `nmId` fra svaret videre. 404 betyr at verket ikke finnes eller ikke er publisert.
 
@@ -30,6 +36,12 @@ GET https://api.nasjonalmuseet.no/api/v1/objects/NG.M.00939
 standard 50).
 
 --8<-- "bla.py"
+
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-bla.json"
+```
 
 Svaret har `totalResults` (antall publiserte verk) og `data`. Fortsett til `data` er tom.
 
@@ -55,6 +67,12 @@ sortert etter relevans, 20 per side som standard (`resultsPerPage` opptil 100).
 === "JavaScript"
 
     --8<-- "tekstsok.js"
+
+Svar (forkortet; `…` betyr at felt er utelatt):
+
+```json
+--8<-- "svar-tekstsok.json"
+```
 
 ## Vanlige feil
 

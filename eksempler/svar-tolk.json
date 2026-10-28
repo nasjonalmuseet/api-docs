@@ -1,0 +1,7 @@
+{
+  "query": "maleri av en fin soloppgang",
+  "searchText": "soloppgang",
+  "fillers": ["av", "en", "fin"],
+  "suggestedFilters": {"objectName": ["Maleri"]},
+  "terms": [{"word": "maleri", "field": "objectName", "value": "Maleri", "works": 5230}]
+}

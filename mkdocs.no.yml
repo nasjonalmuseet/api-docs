@@ -56,5 +56,7 @@ nav:
       - Felt på verket: dokumentasjon/felt.md
       - Feilsvar og grenser: dokumentasjon/feil-og-grenser.md
       - Stabilitet og versjoner: dokumentasjon/stabilitet.md
+      - Endringslogg: dokumentasjon/endringslogg.md
+      - Avviklede endepunkter: dokumentasjon/avviklet.md
   - Vilkår og bruk: vilkar.md
   - Om: om.md

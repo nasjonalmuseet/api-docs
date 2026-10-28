@@ -42,6 +42,28 @@ When the limit is exceeded, the API answers `429` with `Retry-After` (seconds),
 
 If a public service needs more, the key can get its own limit. Contact us.
 
+## Page sizes
+
+| Call | Default | Maximum per page |
+|---|---|---|
+| `GET /objects` (browse) | 50 | 200 |
+| `GET /objects/text-search` | 20 | 100 |
+| `POST /objects/find` | 50 | 100, and `(page − 1) × resultsPerPage` at most 20,000 |
+| `POST /search/*` | 20 | 100 |
+
+## Caching
+
+Responses are cached for a while. A change in the catalogue can therefore take up to six hours to
+show.
+
+| Call | Cached for |
+|---|---|
+| Works, text search, images and Linked Art | 6 hours |
+| `POST /objects/find` | 5 minutes, or 1 hour when the filter must read every work |
+| `POST /search/semantic` | 10 minutes |
+| `POST /search/filter` | 1 hour |
+| `GET /objects` (browse) | Not cached |
+
 ## The key
 
 - It lasts 180 days. Renew it on the registration page before it expires.

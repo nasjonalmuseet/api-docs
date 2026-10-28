@@ -21,6 +21,12 @@ search finds images that resemble the description, even when the words are not i
 GET https://api.nasjonalmuseet.no/api/v1/objects/NG.M.00939
 ```
 
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-verk.en.json"
+```
+
 `nmId` is not case-sensitive: `ng.m.00939` gives the same work. Use the `nmId` from the
 response from then on. 404 means that the work does not exist or is not published.
 
@@ -30,6 +36,12 @@ response from then on. 404 means that the work does not exist or is not publishe
 default 50).
 
 --8<-- "bla.en.py"
+
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-bla.en.json"
+```
 
 The response has `totalResults` (the number of published works) and `data`. Continue until `data` is empty.
 
@@ -55,6 +67,12 @@ sorted by relevance, 20 per page by default (`resultsPerPage` up to 100).
 === "JavaScript"
 
     --8<-- "tekstsok.en.js"
+
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-tekstsok.en.json"
+```
 
 ## Common mistakes
 

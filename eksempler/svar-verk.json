@@ -1,0 +1,30 @@
+{
+  "nmId": "NG.M.00939",
+  "mainTitle": "Skrik",
+  "objectName": "Maleri",
+  "labelDate": "1893",
+  "productionYear": 1893,
+  "production": [
+    {
+      "type": "Produsert",
+      "role": "Kunstner",
+      "person": {
+        "name": "Edvard Munch",
+        "birthYear": "1863",
+        "deathYear": "1944",
+        …
+      },
+      …
+    }
+  ],
+  "materials": ["Papplate"],
+  "techniques": ["Tempera", "Fettstift"],
+  "collection": "Billedkunstsamlingene",
+  "primaryImage": {
+    "imageId": 474178,
+    "imageUrl": "https://ms01.nasjonalmuseet.no/iiif/tif/NG.M.00939%20GP.tif/full/1200,/0/default.jpg",
+    "iiifService": "https://ms01.nasjonalmuseet.no/iiif/tif/NG.M.00939%20GP.tif",
+    …
+  },
+  …
+}

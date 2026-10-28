@@ -29,9 +29,11 @@ Every request can be tried in [Swagger](https://api.nasjonalmuseet.no/api/docs).
 | [`GET /api/linkedart/object/text-search`](https://api.nasjonalmuseet.no/api/docs#/LinkedArt/text_search_linkedart_objects_api_linkedart_object_text_search_get) | open | Linked Art: search |
 | [`GET /api/v1/objects/linkedart/{nmId}`](https://api.nasjonalmuseet.no/api/docs#/LinkedArt/get_object_linkedart_api_v1_objects_linkedart__nmId__get) | pub | Linked Art by inventory number |
 | [`POST /api/v1/search/interpret`](https://api.nasjonalmuseet.no/api/docs#/Search/interpret_search_api_v1_search_interpret_post) | pub | Suggested search text and filters |
+| [`POST /api/v1/objects/find`](https://api.nasjonalmuseet.no/api/docs#/Objects/find_objects_api_v1_objects_find_post) | pub | Look up works with a filter on the fields |
 | [`POST /api/v1/search/semantic`](https://api.nasjonalmuseet.no/api/docs#/Search/semantic_search_api_v1_search_semantic_post) | ext | Semantic search |
 | [`POST /api/v1/search/filter`](https://api.nasjonalmuseet.no/api/docs#/Search/filter_search_api_v1_search_filter_post) | ext | Filtering |
 | [`POST /api/v1/search/similar/{imageId}`](https://api.nasjonalmuseet.no/api/docs#/Search/similar_search_api_v1_search_similar__imageId__post) | ext | Similar images |
+| [`POST /api/v1/search/similar`](https://api.nasjonalmuseet.no/api/docs#/Search/similar_search_by_work_api_v1_search_similar_post) | ext | Similar works, from the work's main image |
 | [`POST /api/v1/search/explain`](https://api.nasjonalmuseet.no/api/docs#/Search/explain_search_api_v1_search_explain_post) | ext | Why an image matched |
 | [`GET /api/health`](https://api.nasjonalmuseet.no/api/docs#/System/health_check_api_health_get) | open | Status and version |
 

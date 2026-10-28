@@ -33,6 +33,12 @@ The key is **always** sent in the `X-API-Key` header.
 
     --8<-- "forste-kall.en.js"
 
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-verk.en.json"
+```
+
 The response is the work *The Scream* (NG.M.00939) as JSON. The most important fields:
 
 | Field | Content |

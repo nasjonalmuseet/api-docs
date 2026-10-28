@@ -41,6 +41,12 @@ why it is not part of the open level.
 
     --8<-- "semantisk-sok_ext.en.js"
 
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-semantisk.en.json"
+```
+
 `lang` chooses the language of the search and the response. Without `lang`, both languages
 are searched. Each hit has `score` and `bestMatchImage` (the image that matched best).
 
@@ -53,9 +59,21 @@ inventory number:
 
 --8<-- "filter_ext.en.py"
 
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-filter.en.json"
+```
+
 ## Step 3: Find similar images
 
 --8<-- "likhet_ext.en.py"
+
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-likhet.en.json"
+```
 
 ## Step 4: Get a suggested search text
 
@@ -64,6 +82,12 @@ does not search, and the suggestion is only used if you choose it. This request 
 with pub.
 
 --8<-- "tolk.en.sh"
+
+Response (shortened; `…` marks omitted fields):
+
+```json
+--8<-- "svar-tolk.en.json"
+```
 
 ## Good advice
 

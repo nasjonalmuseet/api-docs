@@ -1,7 +1,8 @@
 # Fields
 
-These are the fields a work has at the open level (pub), as `GET /api/v1/objects/{nmId}`
-delivers them. The fields ext adds are listed under [Access levels](tilgangsnivaer.md).
+These are the fields a work has, as `GET /api/v1/objects/{nmId}` delivers them: all the fields at
+the open level (pub), the fields ext adds, and briefly full. See also
+[Access levels](tilgangsnivaer.md).
 
 [Download the field list as Excel](../assets/feltliste.xlsx){ .md-button } (one sheet per
 level, with the source in the database and a description in Norwegian and English)
@@ -36,6 +37,30 @@ protection expires. Check these fields before reusing an image, see [Terms](../v
 **No AI data at pub.** The open level contains only catalogue data from the museum's
 collection management system.
 
+## How to read the tables
+
+- **Example** is a value from a known work, usually The Scream (NG.M.00939). `{…}` is an object with
+  the subfields named, and `[{…}, …]` is a list of them.
+- **Source in the catalogue** is the field in the museum's collection management system (MuseumPlus)
+  the value comes from, as stored in the database the API reads. `.value` is the catalogue's
+  controlled value, and `[]` means each element of a list.
+- **On the website** says whether nasjonalmuseet.no shows the field: *yes*, *no*, or *partly* (with what
+  is shown). `–` means the field has not been compared.
+- `–` under Example means the field is empty for the example works.
+
 ## All fields at pub
 
 --8<-- "feltliste_pub.en.md"
+
+## Fields at ext, in addition to pub
+
+Ext is for partners and research and is issued by agreement. Ext has all the fields above, and these:
+
+--8<-- "feltliste_ext.en.md"
+
+## Full
+
+Full is for the museum's own systems and is not available to external users. Full has all works,
+including unpublished ones, and these fields in addition (top-level fields only):
+
+--8<-- "feltliste_full.en.md"

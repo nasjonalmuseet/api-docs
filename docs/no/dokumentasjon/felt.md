@@ -1,7 +1,8 @@
 # Felt på verket
 
-Dette er feltene et verk har på det åpne nivået (pub), slik `GET /api/v1/objects/{nmId}`
-leverer dem. Feltene ext gir i tillegg, står under [Tilgangsnivåer](tilgangsnivaer.md).
+Dette er feltene et verk har, slik `GET /api/v1/objects/{nmId}` leverer dem: alle feltene på
+det åpne nivået (pub), feltene ext gir i tillegg, og kort om full. Se også
+[Tilgangsnivåer](tilgangsnivaer.md).
 
 [Last ned feltlista som Excel](../assets/feltliste.xlsx){ .md-button } (én fane per nivå,
 med kilde i databasen og beskrivelse på norsk og engelsk)
@@ -36,6 +37,30 @@ ut. Sjekk feltene før du gjenbruker et bilde, se [Vilkår](../vilkar.md).
 **Ingen KI-data på pub.** Det åpne nivået inneholder bare katalogdata fra museets
 samlingsforvaltningssystem.
 
+## Slik leser du tabellene
+
+- **Eksempel** er en verdi fra et kjent verk, oftest Skrik (NG.M.00939). `{…}` er et objekt med de
+  nevnte underfeltene, og `[{…}, …]` er en liste av slike.
+- **Kilde i katalogen** er feltet i museets samlingsforvaltningssystem (MuseumPlus) verdien kommer
+  fra, slik det ligger i databasen API-et leser. `.value` er katalogens kodeverkverdi, og `[]` betyr
+  hvert element i en liste.
+- **På Samlingen på nett** sier om nasjonalmuseet.no viser feltet: *ja*, *nei*, eller *delvis* (med
+  hva som vises). `–` betyr at feltet ikke er sammenlignet.
+- `–` i Eksempel betyr at feltet er tomt for eksempelverkene.
+
 ## Alle felt på pub
 
 --8<-- "feltliste_pub.no.md"
+
+## Felt på ext, i tillegg til pub
+
+Ext er for partnere og forskning og deles ut etter avtale. Ext har alle feltene over, og disse:
+
+--8<-- "feltliste_ext.no.md"
+
+## Full
+
+Full er for museets egne systemer og er ikke tilgjengelig for eksterne. Full har alle verk, også
+upubliserte, og i tillegg disse feltene (her bare toppfeltene):
+
+--8<-- "feltliste_full.no.md"

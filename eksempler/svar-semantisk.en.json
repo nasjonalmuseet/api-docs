@@ -1,0 +1,31 @@
+{
+  "query": "two horses behind a fence",
+  "channelsUsed": ["en"],
+  "totalResults": 5,
+  "hasMore": true,
+  "data": [
+    {
+      "nmId": "NG.K&H.1975.0002",
+      "mainTitle": "Two horses",
+      "score": 0.03279,
+      "channel": "en",
+      "channelScores": [
+        {
+          "channel": "en",
+          "rank": 1,
+          "score": 0.01639,
+          "rawScore": 0.7357
+        },
+        …
+      ],
+      "bestMatchImage": {
+        "imageId": 27546,
+        "imageUrl": "https://ms01.nasjonalmuseet.no/iiif/tif/96774.tif/full/1200,/0/default.jpg",
+        …
+      },
+      …
+    },
+    …
+  ],
+  …
+}
