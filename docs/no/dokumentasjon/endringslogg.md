@@ -4,6 +4,20 @@ Endringene som angår brukere av API-et, nyeste først. Kjørende versjon står 
 <https://api.nasjonalmuseet.no/api/health>. Reglene for endringer står under
 [Stabilitet og versjoner](stabilitet.md).
 
+## 3.16.0 — 3. november 2026
+Rettelse før lansering, etter vedtak i katalogforum 3. november: pub har nå de samme feltene som Samlingen på nett.
+
+- **Påskrifter og proveniens på pub:** `inscriptions[]` og `provenance[]` har innhold bare for verk som er katalogisert til bestandskatalognivå, som på Samlingen på nett. For andre verk er de tomme lister. Ext har dem for alle verk.
+- **Felt som er tatt ut av pub og bare finnes på ext:**
+  - `uuid`, `production[].person.uuid`, `multimedia[].uuid` og `primaryImage.uuid`
+  - `production[].person.birthYear` og `.deathYear`
+  - `production[].description` og `production[].place.type`
+  - `titles[].type`, `.dateFrom` og `.dateTo`
+  - `inscriptions[].language`
+  - `provenance[].place`
+  - `multimedia[].creditLine`
+- **Oppslag:** `POST /objects/find` på pub avviser filter på feltene som er tatt ut.
+
 ## 3.14.0 — 28. oktober 2026
 - `POST /objects/find` er raskere med filter på `owner`, `motifType`, `classification`, `copyright.holder`, `copyright.manager`, `provenance.owner` og `production.place.name`.
 - Semantisk søk svarer med ordsøk alene når søkemodellen ikke svarer. Da er `channelsUsed` `["lexical"]`, og svaret har `meta` med årsaken (`degradedReason`).

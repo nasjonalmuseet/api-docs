@@ -4,6 +4,20 @@ Changes that affect users of the API, newest first. The running version is shown
 <https://api.nasjonalmuseet.no/api/health>. The rules for changes are under
 [Stability and versions](stabilitet.md).
 
+## 3.16.0 — 3 November 2026
+Correction before launch, following a decision in the cataloguing forum on 3 November: pub now has the same fields as the collection website (Samlingen på nett).
+
+- **Inscriptions and provenance on pub:** `inscriptions[]` and `provenance[]` have content only for works catalogued to collection-catalogue level, as on the collection website. For other works they are empty lists. Ext has them for all works.
+- **Fields removed from pub, now only on ext:**
+  - `uuid`, `production[].person.uuid`, `multimedia[].uuid` and `primaryImage.uuid`
+  - `production[].person.birthYear` and `.deathYear`
+  - `production[].description` and `production[].place.type`
+  - `titles[].type`, `.dateFrom` and `.dateTo`
+  - `inscriptions[].language`
+  - `provenance[].place`
+  - `multimedia[].creditLine`
+- **Lookups:** `POST /objects/find` on pub rejects filters on the removed fields.
+
 ## 3.14.0 — 28 October 2026
 - `POST /objects/find` is faster with filters on `owner`, `motifType`, `classification`, `copyright.holder`, `copyright.manager`, `provenance.owner` and `production.place.name`.
 - Semantic search answers with word search alone when the search model does not respond. `channelsUsed` is then `["lexical"]`, and the response has `meta` with the reason (`degradedReason`).
