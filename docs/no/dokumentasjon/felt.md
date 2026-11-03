@@ -29,6 +29,10 @@ ellers fra årstall i `labelDate`. Brukes til sortering og filtrering. Vis `labe
 `copyright[]` har navn fra museets person- og stedsregister. Tidligere eiere i proveniensen kan
 være privatpersoner.
 
+**Påskrifter og proveniens (`inscriptions[]`, `provenance[]`).** På pub har de innhold bare for verk
+som er katalogisert til bestandskatalognivå, som på Samlingen på nett. For andre verk er de tomme
+lister på pub. Ext har dem for alle verk.
+
 **Opphavsrett (`copyright[]`, `publicDomain`).** Viser rettighetshaver, forvalter og når vernet går
 ut. Sjekk feltene før du gjenbruker et bilde, se [Vilkår](../vilkar.md).
 
