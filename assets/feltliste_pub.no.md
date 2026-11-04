@@ -30,7 +30,7 @@
 | `materialTechniqueDescription` | Materiale og teknikk som fritekst | tekst | `Tempera og fettstift på papplate` | `materialTechniqueDescription` | ja |
 | `dimensions` | Mål | liste | `[{type, value, unit, category}, …]` | `dimensions` | nei (strukturert; nettsiden viser publishableDimensions) |
 | `dimensions[].type` | Måltype | tekst | `Bredde` | `dimensions[].type.value` | – |
-| `dimensions[].value` | Verdi | heltall | `73.5` | `dimensions[].value` | – |
+| `dimensions[].value` | Verdi | tall | `73.5` | `dimensions[].value` | – |
 | `dimensions[].unit` | Enhet | tekst | `cm` | `dimensions[].unit.value` | – |
 | `dimensions[].category` | Kategori | tekst | `Hovedmål` | `dimensions[].category.value` | – |
 | `publishableDimensions` | Mål som tekst for publisering | tekst | `91 x 73,5 cm` | `publishableDimensions` | ja |
@@ -38,6 +38,7 @@
 | `creditLine` | Kreditering | tekst | `Gave fra Olaf Schou 1910` | `creditLine` | ja |
 | `keywords` | Emneord fra katalogen | liste | `Bildende kunst` | `keywords` | ja |
 | `cataloguingLevel` | Registreringsnivå: Enkeltobjekt, Komplekst objekt, Gruppering, Del av objekt | tekst | `Enkeltobjekt` | `cataloguingLevel.value` | ja («Registreringsnivå») |
+| `productionLocations` | Produksjonssted som nettsiden viser det: nøyaktig område, område og sted fra stedsregisteret | liste | `Vestlandet, Norge` | `production` | ja («Produksjonssted») |
 | `publishingLevel` | Publiseringsnivå: kode A–F og tekst. Nettsiden viser påskrifter, proveniens og litteratur bare for D | objekt | `{code, text}` | `publishingLevel.value` | nei (styrer hva som vises) |
 | `publishingLevel.code` | Kode A–F | tekst | `D` | `publishingLevel.value` | – |
 | `publishingLevel.text` | Nivået som tekst, for eksempel «Bestandskatalog (D) Andre nivå katalogisering» | tekst | `Bestandskatalog (D) Andre nivå katalogisering` | `publishingLevel.value` | – |
@@ -68,7 +69,7 @@
 | `provenance[].dateToYear` | Til år | tekst | `1910` | – | – |
 | `copyright` | Opphavsrett: rettighetshaver, forvalter, status og utløp | liste | `[{holder, manager, status, dateTo}, …]` | `copyrights` | ja |
 | `copyright[].holder` | Rettighetshaver | tekst | `Jakob Weidemann` | `copyrights[]._resolved.name` | – |
-| `copyright[].manager` | Forvalter, for eksempel BONO | – | `BONO` | `copyrights[]._managerResolved.name` | – |
+| `copyright[].manager` | Forvalter, for eksempel BONO | tekst | `BONO` | `copyrights[]._managerResolved.name` | – |
 | `copyright[].status` | Status | tekst | `Aktiv` | `copyrights[].status.value` | – |
 | `copyright[].dateTo` | Når vernet går ut | tekst | `2071-01-01T00.00.00` | `copyrights[].dateTo` | – |
 | `publicDomain` | Fri bruk | boolsk | `true` | `publicDomain` | nei |
