@@ -30,7 +30,7 @@
 | `materialTechniqueDescription` | Material and technique as free text | text | `Tempera og fettstift på papplate` | `materialTechniqueDescription` | yes |
 | `dimensions` | Dimensions | list | `[{type, value, unit, category}, …]` | `dimensions` | no (strukturert; nettsiden viser publishableDimensions) |
 | `dimensions[].type` | Type of measurement | text | `Bredde` | `dimensions[].type.value` | – |
-| `dimensions[].value` | Value | integer | `73.5` | `dimensions[].value` | – |
+| `dimensions[].value` | Value | number | `73.5` | `dimensions[].value` | – |
 | `dimensions[].unit` | Unit | text | `cm` | `dimensions[].unit.value` | – |
 | `dimensions[].category` | Category | text | `Hovedmål` | `dimensions[].category.value` | – |
 | `publishableDimensions` | Dimensions as text for publication | text | `91 x 73,5 cm` | `publishableDimensions` | yes |
@@ -38,6 +38,7 @@
 | `creditLine` | Credit line | text | `Gave fra Olaf Schou 1910` | `creditLine` | yes |
 | `keywords` | Subject terms from the catalogue | list | `Bildende kunst` | `keywords` | yes |
 | `cataloguingLevel` | Cataloguing level: single object, complex object, grouping, part of object | text | `Enkeltobjekt` | `cataloguingLevel.value` | yes («Registreringsnivå») |
+| `productionLocations` | Place of production as the website shows it: exact area, area and place from the place register | list | `Vestlandet, Norge` | `production` | yes («Produksjonssted») |
 | `publishingLevel` | Publishing level: code A–F and text. The website shows inscriptions, provenance and literature only for D | object | `{code, text}` | `publishingLevel.value` | no (styrer hva som vises) |
 | `publishingLevel.code` | Code A–F | text | `D` | `publishingLevel.value` | – |
 | `publishingLevel.text` | The level as text, for example «Bestandskatalog (D) Andre nivå katalogisering» | text | `Bestandskatalog (D) Andre nivå katalogisering` | `publishingLevel.value` | – |
@@ -68,7 +69,7 @@
 | `provenance[].dateToYear` | To year | text | `1910` | – | – |
 | `copyright` | Copyright: holder, manager, status and expiry | list | `[{holder, manager, status, dateTo}, …]` | `copyrights` | yes |
 | `copyright[].holder` | Rights holder | text | `Jakob Weidemann` | `copyrights[]._resolved.name` | – |
-| `copyright[].manager` | Rights manager, e.g. BONO | – | `BONO` | `copyrights[]._managerResolved.name` | – |
+| `copyright[].manager` | Rights manager, e.g. BONO | text | `BONO` | `copyrights[]._managerResolved.name` | – |
 | `copyright[].status` | Status | text | `Aktiv` | `copyrights[].status.value` | – |
 | `copyright[].dateTo` | When protection expires | text | `2071-01-01T00.00.00` | `copyrights[].dateTo` | – |
 | `publicDomain` | Public domain | boolean | `true` | `publicDomain` | no |

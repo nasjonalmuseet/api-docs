@@ -4,6 +4,9 @@ Changes that affect users of the API, newest first. The running version is shown
 <https://api.nasjonalmuseet.no/api/health>. The rules for changes are under
 [Stability and versions](stabilitet.md).
 
+## 3.19.0 — 4 November 2026
+- New field `productionLocations` on pub, ext and full: the place of production as the collection website shows it, for example `["Stockholm", "Sverige"]`. The structured `production[].place` is unchanged.
+
 ## 3.17.0 — 3 November 2026
 Addition: pub follows the collection website. No fields have been removed.
 
