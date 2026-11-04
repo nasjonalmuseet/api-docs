@@ -29,4 +29,3 @@
 | `entityType` | Entity type in MuseumPlus | text | `ART` | `entityType` | – |
 | `isArtwork` | Whether the object is an artwork | boolean | `true` | `isArtwork` | – |
 | `stylePeriod` | Style period | list | – | `stylePeriod` | – |
-| `onDisplay` | On display now: room, exhibition and period | object | `{active, room, exhibition, dateFrom, …}` | `onDisplay.active` | yes («Utstilt i») |

@@ -4,6 +4,21 @@ Changes that affect users of the API, newest first. The running version is shown
 <https://api.nasjonalmuseet.no/api/health>. The rules for changes are under
 [Stability and versions](stabilitet.md).
 
+## 3.17.0 — 3 November 2026
+Addition: pub follows the collection website. No fields have been removed.
+
+- **New fields on pub, ext and full:**
+  - `publishingLevel`: publishing level, with `code` (A–F) and `text`. The collection website shows inscriptions, provenance and literature only for level D.
+  - `cataloguingLevel`: cataloguing level (single object, complex object, grouping, part of object).
+  - `relatedObjects[]`: related published works, with `nmId`, `title` and `type`.
+  - `onDisplay`: on display now (room, exhibition and period). The field was previously on ext only.
+  - `literature[]`: literature, with `citation`, `pageRef` and `literatureRef`. On pub only for level D.
+  - `inscriptions[].primarySecondary` and `.subtype`: primary or secondary, and subtype.
+- **`POST /objects/find`:**
+  - Deep pages returned `400`. This is fixed.
+  - Filters that cannot be prefiltered are faster.
+  - `relatedObjects.type`, `cataloguingLevel` and `publishingLevel.text` can be filtered quickly.
+
 ## 3.16.0 — 3 November 2026
 Correction before launch, following a decision in the cataloguing forum on 3 November: pub now has the same fields as the collection website (Samlingen på nett).
 

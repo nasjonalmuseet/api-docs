@@ -29,6 +29,11 @@ otherwise from years in `labelDate`. Used for sorting and filtering. Show `label
 `copyright[]` carry names from the museum's person and place registers. Previous owners in the
 provenance may be private individuals.
 
+**Inscriptions, provenance and literature (`inscriptions[]`, `provenance[]`, `literature[]`).** On pub
+they have content only for works catalogued to collection-catalogue level (`publishingLevel.code`
+«D»), as on the collection website. For other works they are empty lists on pub. Ext has them for
+all works.
+
 **Copyright (`copyright[]`, `publicDomain`).** Shows the rights holder, the manager and when
 protection expires. Check these fields before reusing an image, see [Terms](../vilkar.md).
 

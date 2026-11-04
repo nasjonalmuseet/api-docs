@@ -29,4 +29,3 @@
 | `entityType` | Enhetstype i MuseumPlus | tekst | `ART` | `entityType` | – |
 | `isArtwork` | Om objektet er et kunstverk | boolsk | `true` | `isArtwork` | – |
 | `stylePeriod` | Stilperiode | liste | – | `stylePeriod` | – |
-| `onDisplay` | Utstilt nå: rom, utstilling og periode | objekt | `{active, room, exhibition, dateFrom, …}` | `onDisplay.active` | ja («Utstilt i») |
