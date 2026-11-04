@@ -37,11 +37,21 @@
 | `collection` | Samling | tekst | `Billedkunstsamlingene` | `collection.value` | delvis (nettsiden viser også institusjon) |
 | `creditLine` | Kreditering | tekst | `Gave fra Olaf Schou 1910` | `creditLine` | ja |
 | `keywords` | Emneord fra katalogen | liste | `Bildende kunst` | `keywords` | ja |
+| `cataloguingLevel` | Registreringsnivå: Enkeltobjekt, Komplekst objekt, Gruppering, Del av objekt | tekst | `Enkeltobjekt` | `cataloguingLevel.value` | ja («Registreringsnivå») |
+| `publishingLevel` | Publiseringsnivå: kode A–F og tekst. Nettsiden viser påskrifter, proveniens og litteratur bare for D | objekt | `{code, text}` | `publishingLevel.value` | nei (styrer hva som vises) |
+| `publishingLevel.code` | Kode A–F | tekst | `D` | `publishingLevel.value` | – |
+| `publishingLevel.text` | Nivået som tekst, for eksempel «Bestandskatalog (D) Andre nivå katalogisering» | tekst | `Bestandskatalog (D) Andre nivå katalogisering` | `publishingLevel.value` | – |
+| `relatedObjects` | Relaterte publiserte verk | liste | `[{nmId, title, type}, …]` | `relatedObjects` | ja («Relaterte objekter») |
+| `relatedObjects[].nmId` | Det relaterte verkets nmId | tekst | `NG.M.00939VERSO` | `_related.nmId` | – |
+| `relatedObjects[].title` | Det relaterte verkets hovedtittel | tekst | `Skisse til Skrik` | `_related.title` | – |
+| `relatedObjects[].type` | Relasjon: Del av, Inneholder, Relatert motiv, Recto til … | tekst | `Recto til` | `relatedObjects[].type.value` | – |
 | `motifType` | Motivtype | liste | `Landskap, Portrett` | `motif.type` | ja |
 | `classification` | Klassifikasjon | liste | `532 - Bildende kunst` | `classification` | ja |
 | `owner` | Eier | tekst | `Nasjonalmuseet for kunst, arkitektur og design` | `_ownerResolved.name` | ja |
-| `inscriptions` | Påskrifter, signaturer og stempler | liste | `[{type, transcription, position, method, …}, …]` | `publishingLevel.value` | ja |
+| `inscriptions` | Påskrifter, signaturer og stempler | liste | `[{type, primarySecondary, subtype, transcription, …}, …]` | `publishingLevel.value` | ja |
 | `inscriptions[].type` | Type: Påskrift, Signatur, Stempel … | tekst | `Signatur og datering` | – | – |
+| `inscriptions[].primarySecondary` | Primær eller sekundær (eventuelt «(usikker)») | tekst | `Primær` | – | – |
+| `inscriptions[].subtype` | Undertype, for eksempel «signatur og datering» | tekst | – | – | – |
 | `inscriptions[].transcription` | Teksten slik den står på verket | tekst | `E. Munch 1893` | – | – |
 | `inscriptions[].position` | Plassering på verket | tekst | `nede venstre` | – | – |
 | `inscriptions[].method` | Teknikk for påskriften | tekst | – | – | – |
@@ -62,6 +72,10 @@
 | `copyright[].status` | Status | tekst | `Aktiv` | `copyrights[].status.value` | – |
 | `copyright[].dateTo` | Når vernet går ut | tekst | `2071-01-01T00.00.00` | `copyrights[].dateTo` | – |
 | `publicDomain` | Fri bruk | boolsk | `true` | `publicDomain` | nei |
+| `literature` | Litteratur | liste | `[{citation, pageRef, literatureRef}, …]` | `publishingLevel.value` | ja (nivå D) |
+| `literature[].citation` | Henvisning i Chicago-stil (kursiv som <i>) | tekst | `Lange, Marit. «Munch as Portrait Painter», i «Edvard Munc…` | – | – |
+| `literature[].pageRef` | Side eller katalognummer | heltall | `128.` | – | – |
+| `literature[].literatureRef` | Litteraturpostens id i MuseumPlus | heltall | `9310` | – | – |
 | `multimedia` | Publiserte bilder | liste | `[{imageId, originalFileName, thumbnail, usage, …}, …]` | `multimedia[] (bare publiserte bilder)` | ja (som bildevisning) |
 | `multimedia[].imageId` | Bildets id (multimediaRef) | heltall | `43925` | `multimedia[] (bare publiserte bilder)` | nei |
 | `multimedia[].originalFileName` | Filnavn i bildearkivet | tekst | `54318.jpg` | `multimedia[] (bare publiserte bilder)` | nei |
@@ -71,3 +85,9 @@
 | `multimedia[].iiifService` | IIIF Image API-adresse | tekst | `https://ms01.nasjonalmuseet.no/iiif/tif/54318.tif` | `multimedia[] (bare publiserte bilder)` | – |
 | `multimedia[].imageUrl` | Bilde-URL (1200 px bredde) | tekst | `https://ms01.nasjonalmuseet.no/iiif/tif/54318.tif/full/12…` | `multimedia[] (bare publiserte bilder)` | – |
 | `primaryImage` | Hovedbildet (samme form som multimedia[]) | objekt | `{imageId, originalFileName, thumbnail, usage, …}` | `multimedia[] (thumbnail` | ja (som bildevisning) |
+| `onDisplay` | Utstilt nå: rom, utstilling og periode | objekt | `{active, room, exhibition, dateFrom, …}` | `onDisplay.active` | ja («Utstilt i») |
+| `onDisplay.active` | 1 når verket er utstilt | heltall | `1` | – | – |
+| `onDisplay.room` | Rom | tekst | `Rom 060 Samlingspresentasjonen` | `onDisplay.room_no` | – |
+| `onDisplay.exhibition` | Utstilling | tekst | `Edvard Munch` | `onDisplay.exhibition_no` | – |
+| `onDisplay.dateFrom` | Utstilt fra | tekst | `2022-06-11T00.00.00` | `onDisplay.dateFrom` | – |
+| `onDisplay.dateTo` | Utstilt til | tekst | `2032-12-31T00.00.00` | `onDisplay.dateTo` | – |
