@@ -89,7 +89,7 @@ This is the same work described with the Linked Art model, with links to the art
 
 **How many requests can I make?**
 - There is a limit per key and minute, lower for searches than for look-ups.
-- The numbers are in the terms of use and may change.
+- The numbers are in [Errors and limits](dokumentasjon/feil-og-grenser.md) and may change.
 - If the API answers `429`, wait until the time in the `Retry-After` header has passed.
 
 **Can I download the whole collection?** The API is not made for that. If you need the whole dataset, get in touch and we will find a better solution.

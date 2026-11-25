@@ -4,7 +4,7 @@ API-et er bygget for å kunne brukes i tjenester som skal leve lenge.
 
 - **`/api/v1` er fryst.** Stier, parametre og felt endres ikke og fjernes ikke.
 - **Nye ting kommer i tillegg:** nye felt, nye valgfrie parametre og nye endepunkter. Programmer må tåle felt de ikke kjenner.
-- **Fjerning eller omdøping skjer i en ny versjon** (`/api/v2`). Den gamle lever i minst 90 dager etter at den nye finnes, med `Deprecation`, `Sunset` og `Link` i svarene.
+- **Fjerning eller omdøping skjer i en ny versjon** (`/api/v2`). Den gamle lever i minst 90 dager etter at den nye finnes, med `Deprecation` og `Sunset` i svarene.
 - **Unntak:** hvilket tilgangsnivå et endepunkt krever, og om et verk eller bilde er publisert. Et verk som avpubliseres i museets samlingssystem, forsvinner fra API-et.
 - **Linked Art-adressene er varige** og kan brukes som lenker. Et verk som avpubliseres, gir `404` på sin adresse, men adressen gjenbrukes aldri.
 

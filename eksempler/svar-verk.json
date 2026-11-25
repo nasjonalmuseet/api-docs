@@ -9,10 +9,9 @@
       "type": "Produsert",
       "role": "Kunstner",
       "person": {
+        "id": 56154,
         "name": "Edvard Munch",
-        "birthYear": "1863",
-        "deathYear": "1944",
-        …
+        "certainty": "sikker"
       },
       …
     }

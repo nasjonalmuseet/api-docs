@@ -4,6 +4,16 @@ Changes that affect users of the API, newest first. The running version is shown
 <https://api.nasjonalmuseet.no/api/health>. The rules for changes are under
 [Stability and versions](stabilitet.md).
 
+## 3.21.0 — 25 November 2026
+- `dimensions[]` on pub leaves out frames and mounts (Rammemål, Utvendig rammemål, Visningsramme, Sekundærramme, Listramme and Passepartout). Sheet, plate and image dimensions are included as before. `publishableDimensions` is unchanged and is what the collection website shows as «Dimensions». Ext has all categories.
+
+## 3.20.0 — 23 November 2026
+Correction after launch: three fields have been removed from pub for now.
+
+- `inscriptions[]`, `provenance[]` and `literature[]` are no longer on pub, including for works catalogued to collection-catalogue level. Ext still has them for all works.
+- `mainTitle` is the object name (for example «Fotografi») when the work has no published title, as on the collection website.
+- `otherTitles` leaves out titles with the same text as the main title.
+
 ## 3.19.0 — 4 November 2026
 - New field `productionLocations` on pub, ext and full: the place of production as the collection website shows it, for example `["Stockholm", "Sverige"]`. The structured `production[].place` is unchanged.
 

@@ -31,15 +31,21 @@ why it is not part of the open level.
 
 === "curl"
 
+    ```bash
     --8<-- "semantisk-sok_ext.en.sh"
+    ```
 
 === "Python"
 
+    ```python
     --8<-- "semantisk-sok_ext.en.py"
+    ```
 
 === "JavaScript"
 
+    ```javascript
     --8<-- "semantisk-sok_ext.en.js"
+    ```
 
 Response (shortened; `…` marks omitted fields):
 
@@ -57,7 +63,9 @@ catalogue's values in Norwegian or English), `productionDateFrom`/`To` (years) a
 `creatorGender` (`female`, `male`, `nonBinary`, `unknown`). Without a search text, sorted by
 inventory number:
 
+```python
 --8<-- "filter_ext.en.py"
+```
 
 Response (shortened; `…` marks omitted fields):
 
@@ -67,7 +75,9 @@ Response (shortened; `…` marks omitted fields):
 
 ## Step 3: Find similar images
 
+```python
 --8<-- "likhet_ext.en.py"
+```
 
 Response (shortened; `…` marks omitted fields):
 
@@ -81,7 +91,9 @@ Response (shortened; `…` marks omitted fields):
 does not search, and the suggestion is only used if you choose it. This request also works
 with pub.
 
+```bash
 --8<-- "tolk.en.sh"
+```
 
 Response (shortened; `…` marks omitted fields):
 

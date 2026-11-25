@@ -49,34 +49,12 @@
 | `motifType` | Motivtype | liste | `Landskap, Portrett` | `motif.type` | ja |
 | `classification` | Klassifikasjon | liste | `532 - Bildende kunst` | `classification` | ja |
 | `owner` | Eier | tekst | `Nasjonalmuseet for kunst, arkitektur og design` | `_ownerResolved.name` | ja |
-| `inscriptions` | Påskrifter, signaturer og stempler | liste | `[{type, primarySecondary, subtype, transcription, …}, …]` | `publishingLevel.value` | ja |
-| `inscriptions[].type` | Type: Påskrift, Signatur, Stempel … | tekst | `Signatur og datering` | – | – |
-| `inscriptions[].primarySecondary` | Primær eller sekundær (eventuelt «(usikker)») | tekst | `Primær` | – | – |
-| `inscriptions[].subtype` | Undertype, for eksempel «signatur og datering» | tekst | – | – | – |
-| `inscriptions[].transcription` | Teksten slik den står på verket | tekst | `E. Munch 1893` | – | – |
-| `inscriptions[].position` | Plassering på verket | tekst | `nede venstre` | – | – |
-| `inscriptions[].method` | Teknikk for påskriften | tekst | – | – | – |
-| `inscriptions[].inscriber` | Hvem som skrev | tekst | – | – | – |
-| `inscriptions[].date` | Datering av påskriften | tekst | – | – | – |
-| `provenance` | Proveniens | liste | `[{type, owner, role, certainty, …}, …]` | `publishingLevel.value` | ja |
-| `provenance[].type` | Type: Eierskap, Aksesjon, Ervervelse … | tekst | `Aksesjon` | – | – |
-| `provenance[].owner` | Eierens navn fra personregisteret | tekst | `Olaf Schou` | – | – |
-| `provenance[].role` | Rolle, for eksempel [40] Tidligere eier | tekst | `[20] Giver/siste eier` | – | – |
-| `provenance[].certainty` | Sikkerhet | tekst | `sikker` | – | – |
-| `provenance[].dateFrom` | Fra (datotekst) | tekst | `1910` | – | – |
-| `provenance[].dateTo` | Til (datotekst) | tekst | `1910` | – | – |
-| `provenance[].dateFromYear` | Fra år | tekst | `1910` | – | – |
-| `provenance[].dateToYear` | Til år | tekst | `1910` | – | – |
 | `copyright` | Opphavsrett: rettighetshaver, forvalter, status og utløp | liste | `[{holder, manager, status, dateTo}, …]` | `copyrights` | ja |
 | `copyright[].holder` | Rettighetshaver | tekst | `Jakob Weidemann` | `copyrights[]._resolved.name` | – |
 | `copyright[].manager` | Forvalter, for eksempel BONO | tekst | `BONO` | `copyrights[]._managerResolved.name` | – |
 | `copyright[].status` | Status | tekst | `Aktiv` | `copyrights[].status.value` | – |
 | `copyright[].dateTo` | Når vernet går ut | tekst | `2071-01-01T00.00.00` | `copyrights[].dateTo` | – |
 | `publicDomain` | Fri bruk | boolsk | `true` | `publicDomain` | nei |
-| `literature` | Litteratur | liste | `[{citation, pageRef, literatureRef}, …]` | `publishingLevel.value` | ja (nivå D) |
-| `literature[].citation` | Henvisning i Chicago-stil (kursiv som <i>) | tekst | `Lange, Marit. «Munch as Portrait Painter», i «Edvard Munc…` | – | – |
-| `literature[].pageRef` | Side eller katalognummer | heltall | `128.` | – | – |
-| `literature[].literatureRef` | Litteraturpostens id i MuseumPlus | heltall | `9310` | – | – |
 | `multimedia` | Publiserte bilder | liste | `[{imageId, originalFileName, thumbnail, usage, …}, …]` | `multimedia[] (bare publiserte bilder)` | ja (som bildevisning) |
 | `multimedia[].imageId` | Bildets id (multimediaRef) | heltall | `43925` | `multimedia[] (bare publiserte bilder)` | nei |
 | `multimedia[].originalFileName` | Filnavn i bildearkivet | tekst | `54318.jpg` | `multimedia[] (bare publiserte bilder)` | nei |

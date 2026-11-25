@@ -37,6 +37,8 @@ API key, which you create yourself in a couple of minutes.
 1. Create a key at <https://api.nasjonalmuseet.no/api/v1/keys/register?lang=en>.
 2. Make the first request:
 
+```bash
 --8<-- "forste-kall.en.sh"
+```
 
 More in [Getting started](veiledninger/kom-i-gang.md).

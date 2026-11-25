@@ -8,7 +8,11 @@ Gå til <https://api.nasjonalmuseet.no/api/v1/keys/register>. Fyll inn navn, e-p
 skal bruke dataene til, les vilkårene og kryss av. Siden sjekker at du er et menneske uten
 å bruke tredjepartstjenester.
 
+- Registreringen gjøres **i en nettleser**. Menneskesjekken løses av JavaScript på siden, så den
+  kan ikke gjøres med curl eller et skript.
 - Nøkkelen **vises én gang**. Ta vare på den. Mister du den, lager du en ny.
+- Eksemplene under leser nøkkelen fra miljøvariabelen `NM_API_KEY`:
+  `export NM_API_KEY=din-nøkkel` (Windows PowerShell: `$env:NM_API_KEY="din-nøkkel"`).
 - Den varer i **180 dager** og fornyes på samme side.
 - Den gir nivået **pub**: publiserte verk, bilder og tekstsøk. Se [Tilgangsnivåer](../dokumentasjon/tilgangsnivaer.md).
 
@@ -23,15 +27,21 @@ Nøkkelen sendes **alltid** i headeren `X-API-Key`.
 
 === "curl"
 
+    ```bash
     --8<-- "forste-kall.sh"
+    ```
 
 === "Python"
 
+    ```python
     --8<-- "forste-kall.py"
+    ```
 
 === "JavaScript"
 
+    ```javascript
     --8<-- "forste-kall.js"
+    ```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 
@@ -62,7 +72,7 @@ Svaret er verket *Skrik* (NG.M.00939) som JSON. De viktigste feltene:
 
 - **401 selv om du har nøkkel:** headeren heter `X-API-Key`. Andre navn, eller nøkkelen i adressen, virker ikke.
 - **403 på et kall:** kallet krever et høyere nivå. Semantisk søk krever ext. Se [Tilgangsnivåer](../dokumentasjon/tilgangsnivaer.md).
-- **Tom `mainTitle`:** verket har ingen publisert tittel. Bruk `objectName` (betegnelsen) som overskrift, slik nettsiden gjør.
+- **`mainTitle` er «Fotografi», «Maleri» o.l.:** verket har ingen publisert tittel, og `mainTitle` er da objektnavnet, som overskriften på nettsiden.
 
 ## Neste steg
 

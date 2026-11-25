@@ -31,15 +31,21 @@ derfor ikke på det åpne nivået.
 
 === "curl"
 
+    ```bash
     --8<-- "semantisk-sok_ext.sh"
+    ```
 
 === "Python"
 
+    ```python
     --8<-- "semantisk-sok_ext.py"
+    ```
 
 === "JavaScript"
 
+    ```javascript
     --8<-- "semantisk-sok_ext.js"
+    ```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 
@@ -56,7 +62,9 @@ Filtrene brukes før rangeringen: `objectName`, `techniques` og `materials` (kat
 verdier på norsk eller engelsk), `productionDateFrom`/`To` (årstall) og `creatorGender`
 (`female`, `male`, `nonBinary`, `unknown`). Uten søketekst, sortert på inventarnummer:
 
+```python
 --8<-- "filter_ext.py"
+```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 
@@ -66,7 +74,9 @@ Svar (forkortet; `…` betyr at felt er utelatt):
 
 ## Steg 3: Finn lignende bilder
 
+```python
 --8<-- "likhet_ext.py"
+```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 
@@ -79,7 +89,9 @@ Svar (forkortet; `…` betyr at felt er utelatt):
 `/search/interpret` foreslår hvordan en fritekst kan deles i søketekst og filtre. Det søker
 ikke, og forslaget brukes bare hvis du velger det. Dette kallet virker også med pub.
 
+```bash
 --8<-- "tolk.sh"
+```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 

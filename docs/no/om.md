@@ -78,7 +78,7 @@ Det samme verket beskrevet med Linked Art-modellen, med lenker til kunstneren og
 
 **Hvorfor finner jeg ikke et verk jeg vet museet har?** API-et viser bare verk som er publisert på Samlingen på nett.
 
-**Hvor mange kall kan jeg gjøre?** Det er et tak per nøkkel og minutt, med lavere tall for søk enn for oppslag. Tallene står i vilkårene og kan endres. Svarer API-et `429`, venter du til tiden i headeren `Retry-After` er ute.
+**Hvor mange kall kan jeg gjøre?** Det er et tak per nøkkel og minutt, med lavere tall for søk enn for oppslag. Tallene står i [Feilsvar og grenser](dokumentasjon/feil-og-grenser.md) og kan endres. Svarer API-et `429`, venter du til tiden i headeren `Retry-After` er ute.
 
 **Kan jeg laste ned hele samlingen?** API-et er ikke laget for det. Trenger du hele datasettet, ta kontakt, så finner vi en bedre løsning.
 

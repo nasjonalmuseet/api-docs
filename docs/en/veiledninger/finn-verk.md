@@ -35,7 +35,9 @@ response from then on. 404 means that the work does not exist or is not publishe
 `GET /api/v1/objects` gives the works page by page, with `page` and `resultsPerPage` (up to 200,
 default 50).
 
+```python
 --8<-- "bla.en.py"
+```
 
 Response (shortened; `…` marks omitted fields):
 
@@ -58,21 +60,56 @@ sorted by relevance, 20 per page by default (`resultsPerPage` up to 100).
 
 === "curl"
 
+    ```bash
     --8<-- "tekstsok.en.sh"
+    ```
 
 === "Python"
 
+    ```python
     --8<-- "tekstsok.en.py"
+    ```
 
 === "JavaScript"
 
+    ```javascript
     --8<-- "tekstsok.en.js"
+    ```
 
 Response (shortened; `…` marks omitted fields):
 
 ```json
 --8<-- "svar-tekstsok.en.json"
 ```
+
+## Find works with a filter
+
+`POST /api/v1/objects/find` finds works by the values in their fields, for example all paintings
+from 1880–1900. The body is a filter expression on the fields as they appear in the response
+(as in MongoDB):
+
+```bash
+curl -s -X POST -H "X-API-Key: $NM_API_KEY" -H "Content-Type: application/json" \
+  -d '{"filter": {"objectName": "Painting", "productionYear": {"$gte": 1880, "$lte": 1900}},
+       "sort": "productionYear", "resultsPerPage": 3, "lang": "en"}' \
+  "https://api.nasjonalmuseet.no/api/v1/objects/find"
+```
+
+| In the body | Meaning |
+|---|---|
+| `filter` | Required. Field names as in the response, with a dot for sub-fields (`production.person.name`) |
+| `sort` | `nmId` (default), `productionYear` or `mainTitle`; a leading `-` sorts descending |
+| `page`, `resultsPerPage` | Pages as when browsing, at most 100 per page |
+| `lang` | `no` (default) or `en`: the language of the response and of the values the filter sees |
+
+- **Operators:** `$and`, `$or`, `$nor`, `$not`, `$eq`, `$ne`, `$in`, `$nin`, `$gt`, `$gte`, `$lt`,
+  `$lte`, `$exists`, `$regex` (with `$options`, at most 100 characters), `$size` and `$elemMatch`.
+- **Text and numbers:** `labelDate` is free text («c. 1890»). Use `productionYear` (a number) for years.
+- **Part of a title:** `{"mainTitle": {"$regex": "^winter", "$options": "i"}}`.
+- **Fast and slow:** filters on `objectName`, `productionYear`, `owner`, `motifType`,
+  `classification`, `production.place.name` and the titles are fast. Other fields can take a few
+  seconds for the whole collection; combine them with one of these.
+- **Errors:** an unknown field or operator gives `422` with the lists of allowed fields and operators.
 
 ## Common mistakes
 
