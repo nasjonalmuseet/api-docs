@@ -30,7 +30,9 @@ be fetched directly from the browser (CORS is open), with a limit of 120 calls p
 
 ## Example
 
+```bash
 --8<-- "linked-art.en.sh"
+```
 
 ## Common mistakes
 

@@ -25,7 +25,9 @@ IIIF gives images and structure, not search. You find the works with [Find works
 
 Every work has `primaryImage` (the main image) and `multimedia[]` (all published images).
 
+```python
 --8<-- "bilder.en.py"
+```
 
 ## Step 2: Build a IIIF address
 
@@ -49,7 +51,9 @@ A IIIF Image address has five parts after `iiifService`:
 
 The manifest is open, without a key, because image viewers cannot send their own headers:
 
+```bash
 --8<-- "iiif-manifest.en.sh"
+```
 
 Paste the address (`https://api.nasjonalmuseet.no/api/v1/iiif/manifest/NG.M.00939.json`)
 into [Mirador](https://projectmirador.org/) or

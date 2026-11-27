@@ -36,6 +36,8 @@ og den lager du selv på et par minutter.
 1. Lag en nøkkel på <https://api.nasjonalmuseet.no/api/v1/keys/register>.
 2. Gjør det første kallet:
 
+```bash
 --8<-- "forste-kall.sh"
+```
 
 Mer i [Kom i gang](veiledninger/kom-i-gang.md).

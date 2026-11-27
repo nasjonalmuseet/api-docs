@@ -8,7 +8,11 @@ Go to <https://api.nasjonalmuseet.no/api/v1/keys/register?lang=en>. Enter your n
 and what you will use the data for, read the terms and tick the box. The page checks that
 you are human without using third-party services.
 
+- Registration is done **in a web browser**. The human check is solved by JavaScript on the
+  page, so it cannot be done with curl or a script.
 - The key is **shown once**. Keep it. If you lose it, create a new one.
+- The examples below read the key from the environment variable `NM_API_KEY`:
+  `export NM_API_KEY=your-key` (Windows PowerShell: `$env:NM_API_KEY="your-key"`).
 - It lasts **180 days** and is renewed on the same page.
 - It gives the **pub** level: published works, images and text search. See [Access levels](../dokumentasjon/tilgangsnivaer.md).
 
@@ -23,15 +27,21 @@ The key is **always** sent in the `X-API-Key` header.
 
 === "curl"
 
+    ```bash
     --8<-- "forste-kall.en.sh"
+    ```
 
 === "Python"
 
+    ```python
     --8<-- "forste-kall.en.py"
+    ```
 
 === "JavaScript"
 
+    ```javascript
     --8<-- "forste-kall.en.js"
+    ```
 
 Response (shortened; `…` marks omitted fields):
 
@@ -62,7 +72,7 @@ The response is the work *The Scream* (NG.M.00939) as JSON. The most important f
 
 - **401 even though you have a key:** the header is called `X-API-Key`. Other names, or the key in the URL, do not work.
 - **403 on a request:** the request requires a higher level. Semantic search requires ext. See [Access levels](../dokumentasjon/tilgangsnivaer.md).
-- **Empty `mainTitle`:** the work has no published title. Use `objectName` (the object name) as the heading, as the website does.
+- **`mainTitle` is «Fotografi», «Painting» or similar:** the work has no published title, and `mainTitle` is then the object name, like the heading on the website.
 
 ## Next steps
 

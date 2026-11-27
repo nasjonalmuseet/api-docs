@@ -24,7 +24,9 @@ the registration page (`registerUrl`, `termsUrl`). Programs that display `messag
 
 Without a key:
 
+```bash
 --8<-- "feilsvar.en.sh"
+```
 
 ## Rate budget
 
@@ -38,7 +40,9 @@ Without a key:
 When the limit is exceeded, the API answers `429` with `Retry-After` (seconds),
 `X-RateLimit-Remaining` and `X-RateLimit-Reset`. Wait and try again:
 
+```python
 --8<-- "rate.en.py"
+```
 
 If a public service needs more, the key can get its own limit. Contact us.
 

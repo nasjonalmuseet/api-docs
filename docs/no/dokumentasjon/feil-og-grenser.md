@@ -24,7 +24,9 @@ registreringen (`registerUrl`, `termsUrl`). Programmer som viser `message`, må 
 
 Uten nøkkel:
 
+```bash
 --8<-- "feilsvar.sh"
+```
 
 ## Ratebudsjett
 
@@ -38,7 +40,9 @@ Uten nøkkel:
 Ved overskridelse svarer API-et `429` med `Retry-After` (sekunder), `X-RateLimit-Remaining`
 og `X-RateLimit-Reset`. Vent og prøv igjen:
 
+```python
 --8<-- "rate.py"
+```
 
 Trenger en offentlig tjeneste mer, kan nøkkelen få egen grense. Kontakt oss.
 

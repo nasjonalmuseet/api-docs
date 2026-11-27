@@ -35,7 +35,9 @@ Svar (forkortet; `…` betyr at felt er utelatt):
 `GET /api/v1/objects` gir verkene side for side, med `page` og `resultsPerPage` (opptil 200,
 standard 50).
 
+```python
 --8<-- "bla.py"
+```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 
@@ -58,21 +60,55 @@ sortert etter relevans, 20 per side som standard (`resultsPerPage` opptil 100).
 
 === "curl"
 
+    ```bash
     --8<-- "tekstsok.sh"
+    ```
 
 === "Python"
 
+    ```python
     --8<-- "tekstsok.py"
+    ```
 
 === "JavaScript"
 
+    ```javascript
     --8<-- "tekstsok.js"
+    ```
 
 Svar (forkortet; `…` betyr at felt er utelatt):
 
 ```json
 --8<-- "svar-tekstsok.json"
 ```
+
+## Finn verk med filter
+
+`POST /api/v1/objects/find` finner verk ut fra verdier i feltene, for eksempel alle malerier fra
+1880–1900. Kroppen er et filteruttrykk på feltene slik de står i svaret (som i MongoDB):
+
+```bash
+curl -s -X POST -H "X-API-Key: $NM_API_KEY" -H "Content-Type: application/json" \
+  -d '{"filter": {"objectName": "Maleri", "productionYear": {"$gte": 1880, "$lte": 1900}},
+       "sort": "productionYear", "resultsPerPage": 3}' \
+  "https://api.nasjonalmuseet.no/api/v1/objects/find"
+```
+
+| I kroppen | Betydning |
+|---|---|
+| `filter` | Påkrevd. Feltnavn som i svaret, med punktum for underfelt (`production.person.name`) |
+| `sort` | `nmId` (standard), `productionYear` eller `mainTitle`; `-` foran gir synkende |
+| `page`, `resultsPerPage` | Sider som ved bla, høyst 100 per side |
+| `lang` | `no` (standard) eller `en`: språket i svaret og i verdiene filteret ser |
+
+- **Operatorer:** `$and`, `$or`, `$nor`, `$not`, `$eq`, `$ne`, `$in`, `$nin`, `$gt`, `$gte`, `$lt`,
+  `$lte`, `$exists`, `$regex` (med `$options`, høyst 100 tegn), `$size` og `$elemMatch`.
+- **Tekst og tall:** `labelDate` er fritekst («ca. 1890»). Bruk `productionYear` (tall) for år.
+- **Del av tittel:** `{"mainTitle": {"$regex": "^vinter", "$options": "i"}}`.
+- **Raskt og tregt:** filter på `objectName`, `productionYear`, `owner`, `motifType`,
+  `classification`, `production.place.name` og titlene går raskt. Andre felt kan ta noen sekunder
+  for hele samlingen; kombiner dem gjerne med ett av disse.
+- **Feil:** ukjent felt eller operator gir `422` med lista over tillatte felt og operatorer.
 
 ## Vanlige feil
 

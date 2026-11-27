@@ -30,7 +30,9 @@ direkte fra nettleseren (CORS er åpent), med en grense på 120 kall i minuttet 
 
 ## Eksempel
 
+```bash
 --8<-- "linked-art.sh"
+```
 
 ## Vanlige feil
 

@@ -25,7 +25,9 @@ IIIF gir bilder og struktur, ikke søk. Verkene finner du med [Finn verk](finn-v
 
 Hvert verk har `primaryImage` (hovedbildet) og `multimedia[]` (alle publiserte bilder).
 
+```python
 --8<-- "bilder.py"
+```
 
 ## Steg 2: Bygg en IIIF-adresse
 
@@ -49,7 +51,9 @@ En IIIF Image-adresse har fem deler etter `iiifService`:
 
 Manifestet er åpent, uten nøkkel, fordi bildevisere ikke kan sende egne headere:
 
+```bash
 --8<-- "iiif-manifest.sh"
+```
 
 Lim adressen (`https://api.nasjonalmuseet.no/api/v1/iiif/manifest/NG.M.00939.json`) inn
 i [Mirador](https://projectmirador.org/) eller
