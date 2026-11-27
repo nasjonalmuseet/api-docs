@@ -5,6 +5,7 @@ The API is built to be used in services that are meant to last.
 - **`/api/v1` is frozen.** Paths, parameters and fields are not changed or removed.
 - **New things are added on top:** new fields, new optional parameters and new endpoints. Programs must tolerate fields they do not know.
 - **Removing or renaming happens in a new version** (`/api/v2`). The old one lives for at least 90 days after the new one exists, with `Deprecation` and `Sunset` in the responses.
+- **From the launch:** the rules apply from 3.22.0 (November 2026). Before the launch the pub level was adjusted to the fields the collection website shows; fields that are not on pub are available on ext. See [Fields on the work](felt.md).
 - **Exceptions:** which access level an endpoint requires, and whether a work or image is published. A work that is unpublished in the museum's collection system disappears from the API.
 - **The Linked Art addresses are persistent** and can be used as links. A work that is unpublished gives `404` at its address, but the address is never reused.
 
